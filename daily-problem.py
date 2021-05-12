@@ -18,3 +18,13 @@ for index1, y in enumerate(numbers):
     else:
       print("skip")
   print("===================")
+
+#Solution 2
+dict = {}
+for index1, y in enumerate(numbers):
+    if magic_number - y in dict:
+        print("YES")
+    dict[y] = index1
+
+print(dict)
+
