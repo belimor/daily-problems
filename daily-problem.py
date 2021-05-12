@@ -6,6 +6,7 @@
 numbers = [10, 15, 3, 7]
 magic_number = 17
 
+# Solution 1
 for index1, y in enumerate(numbers):
   for index2, x in enumerate(numbers):
     if index1 != index2:
@@ -19,12 +20,10 @@ for index1, y in enumerate(numbers):
       print("skip")
   print("===================")
 
-#Solution 2
-dict = {}
-for index1, y in enumerate(numbers):
-    if magic_number - y in dict:
+# Solution 2
+for i, y in enumerate(numbers):
+    if magic_number - y in numbers:
         print("YES")
-    dict[y] = index1
-
-print(dict)
-
+        print(y)
+    else:
+        print("NO")
