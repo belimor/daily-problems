@@ -20,3 +20,17 @@ def new_array(numbers):
 
 new_array([1, 2, 3, 4, 5])
 
+# Solution 2
+import math
+
+def my_new_array(numbers):
+    print(numbers)
+    new_number = []
+    total = math.prod(numbers)
+    for i in range(len(numbers)):
+        new_number.insert(i, math.trunc(total/numbers[i]))
+    print(new_number)
+    print("===================")
+
+my_new_array([1, 2, 3, 4, 5])
+
